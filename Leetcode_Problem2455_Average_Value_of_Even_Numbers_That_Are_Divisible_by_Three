@@ -1,0 +1,29 @@
+int averageValue(int* nums, int numsSize) {
+    int even_sum = 0 , even_count = 0;
+    for( int i = 0 ; i < numsSize ; i++)
+    {
+        if(!(nums[i]&1) && !(nums[i]%3))
+        {
+            even_sum += nums[i];
+            even_count++;
+        }
+    }
+    return !(even_count) ? 0 : (even_sum / even_count);
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+int averageValue(int* nums, int numsSize) {
+    int even_sum = 0 , even_count = 0;
+    for( int i = 0 ; i < numsSize ; i++)
+    {
+        if(!(nums[i]%6))
+        {
+            even_sum += nums[i];
+            even_count++;
+        }
+    }
+    return !(even_count) ? 0 : (even_sum / even_count);
+}
